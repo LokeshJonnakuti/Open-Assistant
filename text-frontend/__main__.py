@@ -32,8 +32,8 @@ def main(backend_url: str = "http://127.0.0.1:8080", api_key: str = "1234"):
     create_user_request = dict(USER)
     create_user_request["tos_acceptance"] = True
     response = requests.post(
-        f"{backend_url}/api/v1/frontend_users/", json=create_user_request, headers={"X-API-Key": api_key}, 
-    timeout=60)
+        f"{backend_url}/api/v1/frontend_users/", json=create_user_request, headers={"X-API-Key": api_key}, timeout=60
+    )
     response.raise_for_status()
     user = response.json()
     typer.echo(f"user: {user}")
