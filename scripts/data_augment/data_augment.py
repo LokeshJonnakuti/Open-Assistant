@@ -12,6 +12,7 @@ args:
 
 import argparse
 import json
+import secrets
 import string
 from collections import Counter
 
@@ -25,7 +26,6 @@ from logic.logic_injector import LogicBug
 from nltk.corpus import wordnet
 from syntax.syntax_injector import SyntaxBug
 from transformers import AutoModelForSeq2SeqLM, AutoTokenizer, T5ForConditionalGeneration, pipeline
-import secrets
 
 
 class DataAugmenter:

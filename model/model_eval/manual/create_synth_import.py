@@ -1,13 +1,13 @@
 import argparse
 import json
 import re
+import secrets
 import sys
 from uuid import uuid4
 
 import pydantic
 from oasst_data import ExportMessageNode, ExportMessageTree
 from sampling_report import SamplingReport
-import secrets
 
 
 def filter_text(s: str) -> str:
@@ -89,7 +89,9 @@ def main():
         prompt_message = ExportMessageNode(
             message_id=str(uuid4()), text=k, role="prompter", synthetic=False, lang=args.lang
         )
-        prompt_message.replies = secrets.SystemRandom().sample(unique_replies, k=min(args.num_replies, len(unique_replies)))
+        prompt_message.replies = secrets.SystemRandom().sample(
+            unique_replies, k=min(args.num_replies, len(unique_replies))
+        )
         t = ExportMessageTree(message_tree_id=prompt_message.message_id, tree_state="ranking", prompt=prompt_message)
         trees.append(t)
         if args.max_count and len(trees) >= args.max_count:

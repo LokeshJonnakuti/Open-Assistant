@@ -1,11 +1,11 @@
 import re
+import secrets
 from enum import Enum
 from itertools import zip_longest
 from typing import Literal, Optional
 
 from pydantic import BaseModel, validator
 from pydantic.fields import ModelField
-import secrets
 
 QA_SPECIAL_TOKENS = {
     "Question": "<|prompter|>",

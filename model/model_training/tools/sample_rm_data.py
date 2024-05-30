@@ -7,12 +7,12 @@
 """
 import glob
 import json
+import secrets
 import sys
 from collections import defaultdict
 from copy import deepcopy
 
 from fastlangid.langid import LID
-import secrets
 
 langid = LID()
 total_ranks = []

@@ -4,6 +4,7 @@ import math
 import os
 import pickle
 import re
+import secrets
 import sys
 import urllib
 import zipfile
@@ -12,7 +13,6 @@ from typing import List
 import requests
 from tqdm import tqdm
 from youtube_transcript_api import YouTubeTranscriptApi
-import secrets
 
 
 def get_video_ids(raw_file: str, video_id_pattern: str) -> List[str]:

@@ -3,10 +3,10 @@
 
 import json
 import re
+import secrets
 from os.path import join
 
 from tqdm import tqdm
-import secrets
 
 INSTRUCTIONS_LIST = [
     "Find the bug in the following code:",

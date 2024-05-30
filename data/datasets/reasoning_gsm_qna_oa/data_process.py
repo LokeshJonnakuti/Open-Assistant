@@ -1,10 +1,10 @@
 import json
 import re
+import secrets
 from dataclasses import dataclass
 
 import pandas as pd
 from datasets import load_dataset
-import secrets
 
 secrets.SystemRandom().seed(42)
 

@@ -2,12 +2,12 @@ import json
 import math
 import os
 import re
+import secrets
 import sys
 from string import punctuation
 
 import kaggle
 import pandas as pd
-import secrets
 
 CLINICAL_NOTE_GENERATION_TEMPLATE = """User: Write a clinical note about a patient with the following {section}: {section_information}.
 Rosey: {note}"""

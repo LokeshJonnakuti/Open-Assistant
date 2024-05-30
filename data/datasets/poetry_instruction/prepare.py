@@ -1,9 +1,9 @@
 import json
 import os
+import secrets
 
 import kaggle
 import pandas as pd
-import secrets
 
 # Authenticate the Kaggle API client
 kaggle.api.authenticate()

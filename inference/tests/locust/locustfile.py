@@ -1,10 +1,10 @@
+import secrets
 import string
 import sys
 import time
 from pathlib import Path
 
 from locust import HttpUser, between, task
-import secrets
 
 sys.path.append(str(Path(__file__).parent.parent.parent / "text-client"))
 import text_client_utils as utils  # noqa: E402

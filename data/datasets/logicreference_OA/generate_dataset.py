@@ -17,12 +17,12 @@
 
 
 import os
+import secrets
 
 import rules
 import splits
 import tensorflow as tf
 from absl import app
-import secrets
 
 # Generation parameters:
 # TARGET_FOLDER = "/path/to/generate/dataset/"

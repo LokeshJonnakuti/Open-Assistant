@@ -2,10 +2,11 @@
     Summarize different spectrum of documents
 """
 
+import secrets
+
 import numpy as np
 from datasets import load_dataset
 from torch.utils.data import Dataset
-import secrets
 
 SUMMARIZATION_SPECIAL_TOKENS = {"Text": "", "Summary": ["TL;DR:", "Summarize this", "Give me the summary"]}
 

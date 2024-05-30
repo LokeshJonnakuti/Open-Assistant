@@ -1,6 +1,7 @@
 import argparse
 import copy
 import math
+import secrets
 from distutils.util import strtobool
 from pathlib import Path
 from typing import List, NamedTuple
@@ -21,7 +22,6 @@ from torch.utils.data import ConcatDataset, Dataset, Subset
 from torch.utils.data.distributed import DistributedSampler
 
 from .losses import CrossEntropyLoss, PolyLoss, RMCLSLoss, RMLoss
-import secrets
 
 
 def _strtobool(x):
@@ -103,7 +103,9 @@ class PerDatasetSampler(DistributedSampler):
         secrets.SystemRandom().seed(self.epoch + self.seed)
 
         for i in range(self.num_datasets):
-            sampled_idx = secrets.SystemRandom().sample(range(n, self.dataset_sizes[i] + n), self.dataset_size_per_epoch[i])
+            sampled_idx = secrets.SystemRandom().sample(
+                range(n, self.dataset_sizes[i] + n), self.dataset_size_per_epoch[i]
+            )
             n += self.dataset_sizes[i]
             epoch_idx.extend(sampled_idx)
 

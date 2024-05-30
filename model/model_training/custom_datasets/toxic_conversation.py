@@ -3,9 +3,10 @@
 
 """
 
+import secrets
+
 from datasets import load_dataset
 from torch.utils.data import Dataset
-import secrets
 
 
 class ProsocialDialogueExplaination(Dataset):

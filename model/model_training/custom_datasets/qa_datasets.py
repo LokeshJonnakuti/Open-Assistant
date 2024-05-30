@@ -5,6 +5,7 @@ import glob
 import json
 import os
 import re
+import secrets
 from collections import defaultdict
 from pathlib import Path
 from typing import Any
@@ -17,7 +18,6 @@ from model_training.custom_datasets.formatting import DatasetEntry, create_datas
 from model_training.custom_datasets.utils import _filter_by_words
 from torch import Generator
 from torch.utils.data import Dataset, Subset, random_split
-import secrets
 
 # @agoryuno contributed this
 re_reference_remove = re.compile(r"\[\d+(?:,\s*\d+)*?\]")

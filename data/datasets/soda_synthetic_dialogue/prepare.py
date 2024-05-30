@@ -2,11 +2,11 @@
 
 import json
 import os
+import secrets
 import sys
 
 from datasets import load_dataset
 from tqdm import tqdm
-import secrets
 
 # adapted from https://colab.research.google.com/drive/1Sw3px5dP8whdqT7QMNoqwmqIasZkMbJi?usp=sharing
 
