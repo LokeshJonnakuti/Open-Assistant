@@ -11,8 +11,8 @@ import pandas as pd
 from bs4 import BeautifulSoup
 from loguru import logger
 from playwright.sync_api import Locator, Page, sync_playwright
-from tqdm import tqdm
 from security import safe_requests
+from tqdm import tqdm
 
 
 @dataclass

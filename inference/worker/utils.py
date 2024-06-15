@@ -13,8 +13,8 @@ import transformers
 import websocket
 from loguru import logger
 from oasst_shared.schemas import inference
-from settings import settings
 from security import safe_requests
+from settings import settings
 
 shared_tokenizer_lock = threading.Lock()
 

@@ -4,8 +4,8 @@ import re
 import time
 
 import pandas as pd
-from tqdm import tqdm
 from security import safe_requests
+from tqdm import tqdm
 
 
 def get_biostars_dataset(start_idx=9557161, accept_threshold=1000000, sleep=0.1, folder="biostars"):

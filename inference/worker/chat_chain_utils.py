@@ -12,9 +12,9 @@ from langchain.prompts import PromptTemplate
 from loguru import logger
 from oasst_shared.schemas import inference
 from openapi_parser import prepare_plugin_for_llm
+from security import safe_requests
 from settings import settings
 from utils import shared_tokenizer_lock, special_tokens
-from security import safe_requests
 
 RESPONSE_MAX_LENGTH = 2048
 DESCRIPTION_FOR_MODEL_MAX_LENGTH = 512
