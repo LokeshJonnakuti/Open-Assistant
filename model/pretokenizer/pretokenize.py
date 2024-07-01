@@ -10,10 +10,10 @@ import numpy as np
 import torch
 from model_training.custom_datasets.formatting import DatasetEntryLm, DatasetEntrySft, Role
 from model_training.utils.utils import _strtobool, get_dataset, get_dataset_fractions, read_yamls
+from security import safe_command
 from tokenizer import build_tokenizer
 from torch.utils.data import ConcatDataset, Dataset, Subset
 from tqdm import tqdm
-from security import safe_command
 
 
 class IntRole(IntEnum):
