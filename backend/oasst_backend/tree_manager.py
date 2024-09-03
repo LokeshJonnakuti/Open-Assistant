@@ -1,3 +1,4 @@
+import secrets
 from datetime import datetime, timedelta
 from enum import Enum
 from http import HTTPStatus
@@ -36,7 +37,6 @@ from oasst_shared.schemas import protocol as protocol_schema
 from oasst_shared.utils import utcnow
 from sqlalchemy.sql.functions import coalesce
 from sqlmodel import Session, and_, func, not_, or_, text, update
-import secrets
 
 
 class TaskType(Enum):
@@ -647,7 +647,10 @@ class TreeManager:
                             if 0 < p.active_children_count < self.cfg.lonely_children_count
                             and p.parent_role == "prompter"
                         ]
-                        if len(lonely_children_parents) > 0 and secrets.SystemRandom().random() < self.cfg.p_lonely_child_extension:
+                        if (
+                            len(lonely_children_parents) > 0
+                            and secrets.SystemRandom().random() < self.cfg.p_lonely_child_extension
+                        ):
                             random_parent = secrets.choice(lonely_children_parents)
 
                     if random_parent is None:

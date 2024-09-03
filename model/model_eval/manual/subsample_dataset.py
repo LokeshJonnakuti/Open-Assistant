@@ -1,12 +1,12 @@
 import argparse
 import gzip
 import json
+import secrets
 from pathlib import Path
 from typing import Optional
 
 import pydantic
 from oasst_data import ExportMessageTree
-import secrets
 
 
 def load_message_trees(

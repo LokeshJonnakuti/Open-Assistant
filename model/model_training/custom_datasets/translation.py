@@ -7,9 +7,10 @@
 
 """
 
+import secrets
+
 from datasets import load_dataset
 from torch.utils.data import Dataset
-import secrets
 
 # postfix prompt
 TRANSLATION_PROMPT = {

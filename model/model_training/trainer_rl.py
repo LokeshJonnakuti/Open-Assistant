@@ -1,6 +1,7 @@
 import argparse
 import math
 import os
+import secrets
 from argparse import Namespace
 from typing import Sequence
 
@@ -19,7 +20,6 @@ from trlx.data.configs import TRLConfig
 from utils.ppo_utils import CustomPPOTrainer
 from utils.utils import _strtobool, get_dataset, get_model, init_rng, read_yamls
 from utils.utils_rl import prepare_tensor
-import secrets
 
 
 def argument_parsing(notebook: bool = False, notebook_args: Sequence[str] | None = None, **kwargs):

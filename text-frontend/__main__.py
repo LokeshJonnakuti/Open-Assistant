@@ -1,10 +1,10 @@
 """Simple REPL frontend."""
 
 import http
+import secrets
 
 import requests
 import typer
-import secrets
 
 app = typer.Typer()
 

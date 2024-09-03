@@ -1,7 +1,7 @@
 import argparse
+import secrets
 
 from oasst_data import read_message_list, write_messages
-import secrets
 
 
 def parse_args():

@@ -1,12 +1,12 @@
 """Simple REPL frontend."""
 
 import http
+import secrets
 from uuid import uuid4
 
 import requests
 import typer
 from faker import Faker
-import secrets
 
 app = typer.Typer()
 fake = Faker()
@@ -111,7 +111,9 @@ def main(
                         answer = secrets.choice([True, False])
                         labels_dict = {valid_labels[0]: 1 if answer else 0}
                     else:
-                        labels = secrets.SystemRandom().sample(valid_labels, secrets.SystemRandom().randint(1, len(valid_labels)))
+                        labels = secrets.SystemRandom().sample(
+                            valid_labels, secrets.SystemRandom().randint(1, len(valid_labels))
+                        )
                         for l in mandatory_labels:
                             if l not in labels:
                                 labels.append(l)
@@ -228,7 +230,9 @@ def main(
                         answer = secrets.choice([True, False])
                         labels_dict = {valid_labels[0]: 1 if answer else 0}
                     else:
-                        labels = secrets.SystemRandom().sample(valid_labels, secrets.SystemRandom().randint(1, len(valid_labels)))
+                        labels = secrets.SystemRandom().sample(
+                            valid_labels, secrets.SystemRandom().randint(1, len(valid_labels))
+                        )
                         for l in mandatory_labels:
                             if l not in labels:
                                 labels.append(l)

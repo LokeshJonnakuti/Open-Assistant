@@ -1,10 +1,10 @@
+import secrets
 from collections import defaultdict
 from typing import List
 
 import numpy as np
 from datasets import load_dataset
 from torch.utils.data import Dataset
-import secrets
 
 SEED = 2020
 

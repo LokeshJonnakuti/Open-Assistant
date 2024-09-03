@@ -1,4 +1,5 @@
 import json
+import secrets
 import uuid
 from dataclasses import dataclass
 
@@ -8,7 +9,6 @@ import language_names
 import language_paraphrase
 import language_translate
 import pandas as pd
-import secrets
 
 secrets.SystemRandom().seed(42)
 

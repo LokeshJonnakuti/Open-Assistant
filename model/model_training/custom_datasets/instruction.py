@@ -1,13 +1,13 @@
 """
     These are in the form of 'INSTRUCTION', 'RESPONSE'
 """
+import secrets
 from typing import Optional
 
 from datasets import load_dataset
 from model_training.custom_datasets.formatting import DatasetEntry, create_dataset_entry_qa
 from model_training.custom_datasets.utils import _filter_by_words
 from torch.utils.data import Dataset
-import secrets
 
 INSTRUCTION_DATASETS = {
     # Note humaneval_mbpp_codegen_qa returns a code string that we would want to at least wrap in ``` marks`

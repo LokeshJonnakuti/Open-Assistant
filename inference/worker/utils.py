@@ -1,4 +1,5 @@
 import collections
+import secrets
 import threading
 import time
 from typing import Iterable, Literal
@@ -13,7 +14,6 @@ import websocket
 from loguru import logger
 from oasst_shared.schemas import inference
 from settings import settings
-import secrets
 
 shared_tokenizer_lock = threading.Lock()
 

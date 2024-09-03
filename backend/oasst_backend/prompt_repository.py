@@ -1,4 +1,5 @@
 import re
+import secrets
 from collections import defaultdict
 from datetime import datetime, timedelta
 from http import HTTPStatus
@@ -38,7 +39,6 @@ from oasst_shared.utils import unaware_to_utc, utcnow
 from sqlalchemy.orm import Query
 from sqlalchemy.orm.attributes import flag_modified
 from sqlmodel import JSON, Session, and_, func, literal_column, not_, or_, text, update
-import secrets
 
 _task_type_and_reaction = (
     (

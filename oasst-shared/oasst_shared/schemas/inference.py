@@ -1,5 +1,6 @@
 import enum
 import platform
+import secrets
 import uuid
 from datetime import datetime
 from typing import Annotated, Literal, Union
@@ -8,7 +9,6 @@ import psutil
 import pydantic
 import pynvml
 from oasst_shared.model_configs import ModelConfig
-import secrets
 
 INFERENCE_PROTOCOL_VERSION = "1"
 

@@ -2,6 +2,7 @@ import argparse
 import gzip
 import json
 import re
+import secrets
 from collections import OrderedDict
 from datetime import datetime
 from pathlib import Path
@@ -12,7 +13,6 @@ import torch
 from model_training.models.peft_modeling import load_peft_model
 from tqdm import tqdm
 from transformers import AutoTokenizer, PreTrainedTokenizer
-import secrets
 
 QA_SPECIAL_TOKENS = {"Question": "<human>", "Answer": "<bot>", "StartPrefix": "<prefix>", "EndPrefix": "</prefix>"}
 QA_SPECIAL_TOKENS_V2_5 = {
