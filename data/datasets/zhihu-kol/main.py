@@ -6,8 +6,8 @@ import multitasking
 import pandas as pd
 from bs4 import BeautifulSoup
 from retry import retry
-from tqdm import tqdm
 from security import safe_requests
+from tqdm import tqdm
 
 
 def get_uid_by_url_token(url_token: str) -> str:

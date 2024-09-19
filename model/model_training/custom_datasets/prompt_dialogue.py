@@ -3,13 +3,14 @@ import json
 import re
 from pathlib import Path
 from typing import List, Mapping, Optional, Sequence, Union
+
 from datasets import load_dataset
 from model_training.custom_datasets.formatting import DatasetEntrySft, Role, Utterance
 from model_training.custom_datasets.oasst_dataset import ListDataset
 from model_training.custom_datasets.utils import _filter_by_words
+from security import safe_requests
 from torch import Generator, randperm
 from torch.utils.data import Dataset, random_split
-from security import safe_requests
 
 
 def load_oig_file(

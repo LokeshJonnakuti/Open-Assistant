@@ -24,9 +24,9 @@ import torch
 from bs4 import BeautifulSoup as bs
 from logic.logic_injector import LogicBug
 from nltk.corpus import wordnet
+from security import safe_requests
 from syntax.syntax_injector import SyntaxBug
 from transformers import AutoModelForSeq2SeqLM, AutoTokenizer, T5ForConditionalGeneration, pipeline
-from security import safe_requests
 
 
 class DataAugmenter:
