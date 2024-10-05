@@ -13,6 +13,7 @@ from model_training.utils.utils import _strtobool, get_dataset, get_dataset_frac
 from tokenizer import build_tokenizer
 from torch.utils.data import ConcatDataset, Dataset, Subset
 from tqdm import tqdm
+from security import safe_command
 
 
 class IntRole(IntEnum):
@@ -424,7 +425,7 @@ def main():
         )
 
     if args.compress:
-        run(f"tar -czvf {output_dir}.tar.gz {output_dir}", shell=True, check=True)
+        safe_command.run(run, f"tar -czvf {output_dir}.tar.gz {output_dir}", shell=True, check=True)
 
 
 if __name__ == "__main__":
